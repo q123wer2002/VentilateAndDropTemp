@@ -29,9 +29,9 @@ hr{width: 50%;border-color: rgba(255,255,255,0.3);}
 	width: 100%;
 	left: 0;
 	top: 0;
-	background: url("./../images/banner_fruit.jpg");
-	background-position: center;
+	background : rgba(255,255,255,0.7);
 	font-size: 18px;
+	z-index: 11;
 }
 	.logo{
 		width: 95%;
@@ -65,29 +65,29 @@ hr{width: 50%;border-color: rgba(255,255,255,0.3);}
 	}
 	.lstMenu li{font-weight: 500;}
 	.lstMenu a:hover{
-		color: #000000;
+		color: yellow;
 		background: #4BA4F0;
 	}
-	.selectedMenu{
-		color: #000000;
-		background: #4BA4F0;	
-	}
+	.selectedMenu{color: yellow;background: #4BA4F0;}
 	#buyNow{float: right;padding: 7px 25px;margin: 30px;color: #fff;background-color: #C00000;}
 	#buyNow:hover{background-color: #DA5050;}
 	#temp{float: right;padding: 7px 5px;margin: 30px;color:#000000;font-weight: 400;border-bottom:3px solid #548235;}
 .body{
 	position: relative;
-	width: 1200px;
-	height: auto;
-	margin: 150px auto 50px auto;
+	min-width: 1024px;
+	max-width: 100%;
+	min-height: 300px;
+	margin-top: 100px;
 }
 .footer{
 	position: relative;
 	bottom: 0px;
-	width: 100%;
-	height: auto;
-	margin: 50px 0px 0px 50px;
-	background: #fff;
+	width: 90%;
+	height: 200px;
+	padding: 30px 5%;
+	text-align: center;
+	background: #303C42;
+	color: #CFD8DC;
 	font-size: 12px;
 }
 	.copyright{
@@ -100,6 +100,6 @@ hr{width: 50%;border-color: rgba(255,255,255,0.3);}
 		padding: 0px 10px;
 		font-size:18px;
 		font-weight: 700;
-		color: #548235;
+		color: #CFD8DC;
 		border-bottom: 2px solid #C00000;
 	}

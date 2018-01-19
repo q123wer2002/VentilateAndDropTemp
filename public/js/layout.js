@@ -41,14 +41,14 @@ yuJeng.controller('mainController', function($scope, $rootScope,$http){
 		}
 	//menu list
 		$rootScope.objMenuList = {
-			index : {name:"首頁", link:"index", isSelected:false, isShown:true},
-			farmerTalk : {name:"農民都說讚", link:"farmerTalk.html", isSelected:false, isShown:false},
-			friendShop : {name:"合作商家", link:"friendShop.html", isSelected:false, isShown:false},
-			masterVegeFood : {name:"蔬果大廚在這", link:"masterVegeFood.html", isSelected:false, isShown:false},
-			shipments : {name:"蔬果出貨區", link:"shipments.html", isSelected:false, isShown:true},
-			activity : {name:"一起探訪去", link:"activity.html", isSelected:false, isShown:true},
-			shopping : {name:"購物去吧！", link:"shopping.html", isSelected:false, isShown:true},
-			robotapi : {name:"蔬果機器人beta", link:"vegebot", isSelected:false, isShown:true, style:{} }
+			//index : {name:"首頁", link:"index", isSelected:false, isShown:true},
+			news : {name:"最新消息", link:"index", isSelected:false, isShown:true, style:{}},
+			patentAuth : {name:"專利認證", link:"patentAuth", isSelected:false, isShown:true, style:{}},
+			productInfo : {name:"產品資訊", link:"productInfo", isSelected:false, isShown:true, style:{}},
+			realPerform : {name:"工程實績", link:"realPerform", isSelected:false, isShown:true, style:{}},
+			aboutMe : {name:"關於友證", link:"aboutMe", isSelected:false, isShown:true, style:{}},
+			download : {name:"型錄下載", link:"download", isSelected:false, isShown:true, style:{}},
+			contactUs : {name:"聯絡我們", link:"contactUs", isSelected:false, isShown:true, style:{}},
 		};
 
 		$rootScope.StyleTargetMenu = function(objMenu){

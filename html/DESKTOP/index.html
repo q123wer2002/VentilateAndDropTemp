@@ -15,6 +15,11 @@
 	<!-- Load specific javascript or css -->
 	<script type="text/javascript" src="./js/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="./desktop_css/index.css">
+
+	<!-- slider -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+	<link rel="stylesheet" type="text/css" href="./desktop_css/slider.css">
 	<!-- End to load -->
 </head>
 <body ng-controller="indexController">
@@ -28,16 +33,41 @@
 	
 	<!-- index start -->
 	<div class="body">
-		<link rel="stylesheet" type="text/css" href="./desktop_css/index.css">
-		<p id="hint">水果小知識</p>
-		<ul class="fruitIntro">
-			<li ng-repeat="fruit in aryFruitIntro">
-				<img ng-src="{{fruit.picUri}}" />
-				<h1>{{fruit.name}}</h1>
-				<p>{{fruit.info}}</p>
-				<hr class="verticalLine" ng-if="$index != aryFruitIntro.length-1">
-			</li>
-		</ul>
+		<div class="slider-wrapper">
+			<div class="slider">
+				<div class="slider--item" style="background-image: url(http://www.artith.com/images/banner-index-03.jpg)"></div>
+				<div class="slider--item" style="background-image: url(http://www.legitreviews.com/images/reviews/1819/xaf_banner.png)"></div>
+				<div class="slider--item" style="background-image: url(https://storage.googleapis.com/maclin/2017/11/banner-1b-1140x512.jpg)"></div>
+				<div class="slider--item" style="background-image: url(http://pimg.tradeindia.com/81775/2/template_photo_1.jpg)"></div>
+			</div>
+		</div>
+
+		<script src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+		<script type="text/javascript" src="./js/slider.js"></script>
+
+		<div class="news">
+			<div class="left newsContent">
+				<h1>農畜牧產品應用實績分享</h1>
+			</div>
+			<div class="right newsContent">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/l92QiWvJVrY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="news">
+			<div class="left newsContent">
+				<h1>2017年 國、內外展覽實績</h1>
+			</div>
+			<div class="right newsContent">
+				<img ng-repeat="img in aryExhibitImgs" ng-src={{img}} width="50%">
+			</div>
+		</div>
+		<div class="news">
+			<div class="left newsContent">
+			</div>
+			<div class="right newsContent">
+			</div>
+		</div>
 	</div>
 	<!-- end index -->
 
