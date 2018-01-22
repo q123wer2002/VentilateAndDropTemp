@@ -29,5 +29,9 @@ m_app.index = function(req,res){
 	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/index.html');
 	res.sendFile( szPath );
 }
+m_app.patent = function(req,res){
+	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/patent.html');
+	res.sendFile( szPath );
+}
 
 module.exports = m_app;

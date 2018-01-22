@@ -2,15 +2,78 @@
 	width: 1024px;
 	margin: auto;
 	padding: 15px 0px;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 .news .newsContent{
-	width: 509px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 15px 0px;
+}
+.news .newsContent h2{
+	font-weight: 700;
+	margin: 10px;
+	color: #218FEE;
+}
+.news .newsContent .textArea{
+	width: 700px;
+	margin: 0px auto 15px auto;
+	font-size: 18px;
+}
+.news .newsContent .imagesUL{
+	list-style: none;
+}
+.news .newsContent .imagesUL li{
+	display: inline-block;
+	width: 45%;
+	margin: 10px;
+}
+
+.news .newsContent .shortDetails{
+	list-style: none;
+}
+
+.news .newsContent .shortDetails li{
+	display: inline-block;
+	position: relative;
+	width: 320px;
 	height: 300px;
-	display: inline;
+	margin: 10px;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
-.news .left{
-	border-right: 1px solid rgba(0,0,0,0.2);
+.news .newsContent .shortDetails li:hover .bg{
+	bottom: 0px;
 }
-.news .right{
+.news .newsContent .shortDetails li .bg{
+	position: absolute;
+	left: 0;
+	bottom: -100%;
+	width: 90%;
+	height: 70%;
+	padding: 3.6% 5%;
+	background: rgba(239,239,239,0.8);
+	color: #218FEE;
+	box-shadow: 1px 1px 10px #888;
+	transition:bottom .4s ease;
+}
+.news .newsContent .shortDetails li .bg h3{
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 900;
+}
+.news .newsContent .shortDetails li .bg .shortText{
+	width: 100%;
+	height: 60%;
+	white-space: pre-line;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.news .newsContent .shortDetails li .bg .linkText{
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	color: blue;
+	text-decoration: underline;
 }

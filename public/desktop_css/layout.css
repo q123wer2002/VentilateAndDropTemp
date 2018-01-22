@@ -12,7 +12,7 @@ body{
 	font-family: '文泉驛微米黑 Regular', '文泉驛微米黑','Arial Negreta cursiva', 'Arial','微軟正黑體';
 	overflow-x:hidden;
 }
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, input, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{margin: 0;padding: 0;border: 0;transition:opacity .2s ease,color .2s ease,background .2s ease,box-shadow .2s ease,text-shadow .2s ease,filter .2s ease,padding .2s ease,border .2s ease;font-family: '微軟正黑體';font-weight: 400;}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, input, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{margin: 0;padding: 0;border: 0;transition:opacity .2s ease,color .2s ease,background .2s ease,box-shadow .2s ease,text-shadow .2s ease,filter .2s ease,padding .2s ease,border .2s ease,bottom .2s ease;font-family: '微軟正黑體';font-weight: 400;}
  *:focus { outline: none; }
 a {	background: transparent;text-decoration: none;color: #000;}a:active,a:hover {outline: 0;}
 button{border:none;font-family: "微軟正黑體";}
@@ -29,8 +29,8 @@ hr{width: 50%;border-color: rgba(255,255,255,0.3);}
 	width: 100%;
 	left: 0;
 	top: 0;
-	background : rgba(255,255,255,0.7);
-	font-size: 18px;
+	background : rgba(239,239,239,0.7);
+	font-size: 15px;
 	z-index: 11;
 }
 	.logo{
@@ -46,7 +46,7 @@ hr{width: 50%;border-color: rgba(255,255,255,0.3);}
 	}
 	.logo #tel{
 		float: right;
-		margin-right: 10%;
+		margin-right: 7%;
 	}
 	.lstMenu{
 		width: 95%;
@@ -83,23 +83,62 @@ hr{width: 50%;border-color: rgba(255,255,255,0.3);}
 	position: relative;
 	bottom: 0px;
 	width: 90%;
-	height: 200px;
+	height: 280px;
 	padding: 30px 5%;
-	text-align: center;
-	background: #303C42;
-	color: #CFD8DC;
-	font-size: 12px;
+	background: #efefef;
+	color: #000;
+	font-size: 15px;
+	border-top: 3px solid rgba(33,143,238,0.7);
 }
-	.copyright{
-		padding-bottom: 20px;
+	.container{
+		width: 1160px;
+		padding: 0 40px;
+		margin: auto;
+		position: relative;
 	}
-	#contactInfo{
-		position: absolute;
-		right: 150px;
-		bottom: 20px;
-		padding: 0px 10px;
-		font-size:18px;
-		font-weight: 700;
-		color: #CFD8DC;
-		border-bottom: 2px solid #C00000;
+		.small_logo{
+			position: absolute;
+			width: 83px;
+			height: 30px;
+			margin-bottom: 30px;
+		}
+	.footer_content{
+		display: inline-block;
+		width: 1030px;
+		height: 282.5px;
+		padding-left: 130px;
+	}
+		.footer_section{
+			display: inline-block;
+			float: left;
+			width: 120.25px;
+			height: 206.5px;
+			padding: 0 30px;
+			margin: 0px 15px;
+			text-align: left;
+		}
+		.footer_section h3{
+			font-weight: 900;
+		}
+			.section_liks{
+				margin-top: 20px;
+				list-style: none;
+			}
+			.section_liks li{
+				margin: 10px 0px;
+				color: #999;
+				font-size: 13px;
+			}
+			.section_liks li:hover{
+				text-decoration: underline;
+				color: #333;
+			}
+		.subscription{
+			width: 200px;
+			padding-left: 30px;
+			border-left: 1px solid rgba(0,0,0,0.2);
+		}
+	.copyright{
+		color: #888;
+		font-size: 13px;
 	}

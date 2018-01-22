@@ -1,0 +1,53 @@
+.body_container{
+	width: 1024px;
+	margin: auto;
+	padding: 15px 0px;
+}
+.body_container .patent_title_List{
+	width: 280px;
+	position: absolute;
+}
+.body_container .patent_title_List .titleUl{
+	list-style: none;
+}
+.body_container .patent_title_List .titleUl li{
+	padding: 25px 20px;
+	width: 220px;
+	height: 30px;
+	background-color: #efefef;
+	text-align: left;
+	margin: 3px 0px;
+	color: #888;
+	line-height: 30px;
+	font-size: 15px;
+}
+.body_container .patent_title_List .titleUl li:hover{
+	color: #000;
+	background-color: #e0e0e0;
+}
+.slectedPatent{
+	text-decoration: underline;
+	color: #000;
+	background-color: #e0e0e0;
+}
+.body_container .patent_body{
+	margin-left: 280px;
+	width: 740px;
+	min-height: 470px;
+	display: inline-block;
+}
+.body_container .patent_body .imgUl{
+	list-style: none;
+}
+.body_container .patent_body .imgUl li{
+	display: inline-block;
+	margin: 7px;
+	width: 230px;
+	height: 330px;
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+.body_container .patent_body .imgUl li img{
+	max-width: 100%;
+	max-height: 100%;
+}

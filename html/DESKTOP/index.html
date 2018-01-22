@@ -47,25 +47,27 @@
 		<script type="text/javascript" src="./js/slider.js"></script>
 
 		<div class="news">
-			<div class="left newsContent">
-				<h1>農畜牧產品應用實績分享</h1>
+			<div class="newsContent">
+				<h2>公司介紹 (純文字)</h2>
+				<p class="textArea">銘崙公司累積數十年馬達專業製造經驗，並引進國外先進設備及技術，致力於工業用馬達製造，再成立雅速達公司專研廠房通風，製造通風降溫設備及環保空調，使國人皆能享有通風設備所帶來的舒適環境。產品已外銷世界各國，並為國內外無數客戶OEM及ODM，因廠房通風的品質與通風設備的功能快速地提升，不管是悶熱、異味、灰塵、皆能有效改善廠內環境，在市場上展現優勢的競爭力。</p>
 			</div>
-			<div class="right newsContent">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/l92QiWvJVrY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<div class="newsContent">
+				<h2>Your elusive creative genius (外部插鍵)</h2>
+				<p class="textArea">Elizabeth Gilbert muses on the impossible things we expect from artists and geniuses -- and shares the radical idea that, instead of the rare person "being" a genius, all of us "have" a genius. It's a funny, personal and surprisingly moving talk.</p>
+				<iframe width="1024" height="500" src="https://embed.ted.com/talks/elizabeth_gilbert_on_genius" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
-		</div>
-		<div class="news">
-			<div class="left newsContent">
-				<h1>2017年 國、內外展覽實績</h1>
-			</div>
-			<div class="right newsContent">
-				<img ng-repeat="img in aryExhibitImgs" ng-src={{img}} width="50%">
-			</div>
-		</div>
-		<div class="news">
-			<div class="left newsContent">
-			</div>
-			<div class="right newsContent">
+			<div class="newsContent">
+				<h2>成功案例 (圖片+文字)</h2>
+				<ul class="shortDetails">
+					<li ng-repeat="detail in aryExhibitDetails" 
+						ng-style="{'background-image':'url(' + detail.img + ')'}">
+						<div class="bg">
+							<h3>{{detail.title}}</h3>
+							<div class="shortText">{{detail.shortTxt}}</div>
+							<a href="javascript:;" class="linkText">查看更多</a>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

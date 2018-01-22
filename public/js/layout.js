@@ -43,7 +43,7 @@ yuJeng.controller('mainController', function($scope, $rootScope,$http){
 		$rootScope.objMenuList = {
 			//index : {name:"首頁", link:"index", isSelected:false, isShown:true},
 			news : {name:"最新消息", link:"index", isSelected:false, isShown:true, style:{}},
-			patentAuth : {name:"專利認證", link:"patentAuth", isSelected:false, isShown:true, style:{}},
+			patent : {name:"專利認證", link:"patent", isSelected:false, isShown:true, style:{}},
 			productInfo : {name:"產品資訊", link:"productInfo", isSelected:false, isShown:true, style:{}},
 			realPerform : {name:"工程實績", link:"realPerform", isSelected:false, isShown:true, style:{}},
 			aboutMe : {name:"關於友證", link:"aboutMe", isSelected:false, isShown:true, style:{}},

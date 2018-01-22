@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html ng-app="yuJeng" ng-controller="mainController">
+<head>
+	<link rel="shortcut icon" href="./images/favicon.ico" >
+	<link rel="stylesheet" type="text/css" href="./desktop_css/layout.css">
+
+	<script type="text/javascript" src="./js/lib/angular.js"></script>
+	<script type="text/javascript" src="./js/lib/jquery.js"></script>
+	<script type="text/javascript" src="./js/layout.js"></script>
+
+	<meta name="{{meta.name}}" content="{{meta.content}}" ng-repeat="meta in $root.header.metas">
+
+	<title>{{$root.header.title}}</title>
+
+	<!-- Load specific javascript or css -->
+	<script type="text/javascript" src="./js/patent.js"></script>
+	<link rel="stylesheet" type="text/css" href="./desktop_css/patent.css">
+</head>
+<body ng-controller="patentController">
+
+	<!-- gogle analysis -->
+	<script>
+	</script>
+	
+	<!-- ng-include="$root.includePages.top" -->
+	<div class="header" ng-include="$root.includePages.top" ></div>
+	
+	<!-- index start -->
+	<div class="body">
+		<div class="body_container">
+			<div class="patent_title_List">
+				<ul class="titleUl">
+					<a href="javascript:;"
+						ng-repeat="patent in aryPatentList" 
+						ng-click="fnSelectPatent(patent)"
+						ng-class="{slectedPatent:IsSelected($index)}">
+						<li ng-class="{slectedPatent:IsSelected($index)}">{{patent.title}}</li>
+					</a>
+				</ul>
+			</div>
+			<div class="patent_body">
+				<h2>{{aryPatentList[nSelectPatent].title}}</h2>
+				<ul class="imgUl">
+					<li ng-repeat="source in aryPatentList[nSelectPatent].imgs">
+						<img src="{{source}}" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end index -->
+
+	<!-- ng-include="$root.includePages.footer" -->
+	<div class="footer" ng-include="$root.includePages.footer"></div>
+</body>
+</html>
