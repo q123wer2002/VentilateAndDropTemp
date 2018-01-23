@@ -33,5 +33,9 @@ m_app.patent = function(req,res){
 	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/patent.html');
 	res.sendFile( szPath );
 }
+m_app.product = function(req,res){
+	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/product.html');
+	res.sendFile( szPath, {"title":"testPass"} );
+}
 
 module.exports = m_app;

@@ -25,6 +25,7 @@ m_app.get( '/templates/footer', m_routePage.templateFooter );
 m_app.get( '/', m_routePage.index );
 m_app.get( '/index', m_routePage.index );
 m_app.get( '/patent', m_routePage.patent );
+m_app.get( '/product', m_routePage.product );
 
 m_app.listen(m_nPort, function(){
 	console.log('Example app listening on port ' + m_nPort + '!');
