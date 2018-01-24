@@ -1,0 +1,25 @@
+extends ./DESKTOP_templates/layout.jade
+block scripts
+	script(type='text/javascript', src='/js/product.js')
+block links
+	link(rel='stylesheet', type='text/css', href='/desktop_css/product.css')
+block content
+	.Mainbody(ng-controller='productController')
+		// gogle analysis
+		script.
+		include ./DESKTOP_templates/top.jade
+		// index start
+		.body
+			.body_container
+				.productTrace
+					ul.traceUl
+						li(ng-repeat="(obj,value) in objTrace")
+							a(href="{{value.link}}"){{value.name}}&#09;
+							span(ng-if="fnIsLastOne($index)")&gt;&#09;
+				.productList
+					ul.ListUl
+						li(ng-repeat="node in fnGetAryRoot()")
+							img(src="{{node.pics[0]}}")
+							p{{node.name}}
+		// end index
+		include ./DESKTOP_templates/footer.jade

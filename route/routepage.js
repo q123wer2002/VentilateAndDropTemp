@@ -5,10 +5,13 @@ var m_express = require('express');
 var m_app = m_express();
 var m_router = m_express.Router();
 var m_MobileDetect = require('mobile-detect');
+var m_path = require('path');
 
 //local var
 var m_szHtmlPath = __dirname + "/../html";
-var m_path = require('path');
+var m_szServerPath = m_app.get('domain name') + ":" + m_app.get('port');
+
+m_app.set( 'views', m_szHtmlPath );
 
 function fnGetDeviceName( request ){
 	var md = new m_MobileDetect(request.headers['user-agent']);
@@ -17,25 +20,15 @@ function fnGetDeviceName( request ){
 }
 
 //route
-m_app.templateTop = function(req,res){
-	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/templates/top.html');
-	res.sendFile( szPath );
-}
-m_app.templateFooter = function(req,res){
-	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/templates/footer.html');
-	res.sendFile( szPath );
-}
 m_app.index = function(req,res){
-	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/index.html');
-	res.sendFile( szPath );
+	res.render( fnGetDeviceName( req ) + '_index', {title:""} );
 }
 m_app.patent = function(req,res){
-	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/patent.html');
-	res.sendFile( szPath );
+	res.render( fnGetDeviceName( req ) + '_patent', {title:"專利"} );
 }
 m_app.product = function(req,res){
-	var szPath = m_path.join(m_szHtmlPath + '/' + fnGetDeviceName(req) + '/product.html');
-	res.sendFile( szPath, {"title":"testPass"} );
+	var nId = req.params.id;
+	res.render( fnGetDeviceName( req ) + '_product', {title:"產品"} );
 }
 
 module.exports = m_app;
