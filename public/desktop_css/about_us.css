@@ -1,0 +1,29 @@
+.body_container{
+	width: 1024px;
+	margin: auto;
+	padding: 15px 0px;
+}
+
+.body_container h1{
+	font-weight: 800;
+}
+.body_container table{
+	width: 80%;
+	margin: 10px auto 0 auto;
+	border-collapse: collapse;
+	color: #000;
+	text-align:center;
+}
+.body_container table td{
+	padding:10px;
+	border:1px solid #888;
+}
+.body_container table tr:nth-child(even) {background: #eaeaea}
+.body_container table tr:nth-child(odd) {background: #fcfcfc}
+.body_container table tr:hover{
+	background: rgba(33,143,238,0.5);
+}
+
+.body_container table tr a:hover{
+	text-decoration: underline;
+}

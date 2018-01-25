@@ -1,8 +1,9 @@
-input(type='hidden')
-.logo
-  span {{$root.header.title}}
-  span#tel 聯絡資訊：0912-345-678
-div
-  ul.lstMenu
-    a(href='/{{menu.link}}', ng-repeat='menu in $root.objMenuList', ng-init='$root.StyleTargetMenu(menu)', ng-class='{selectedMenu:menu.isSelected}', ng-if='menu.isShown', title='{{menu.name}}', ng-style='menu.style')
-      li(ng-class='{selectedMenu:menu.isSelected}') {{menu.name}}
+.header
+	input(type='hidden')
+	.logo
+		span {{$root.header.title}}
+		span#tel 聯絡資訊：0912-345-678
+	div
+		ul.lstMenu
+			a(href='/{{menu.link}}', ng-repeat='menu in $root.objMenuList', ng-init='$root.StyleTargetMenu(menu)', ng-class='{selectedMenu:menu.isSelected}', ng-if='menu.isShown', title='{{menu.name}}', ng-style='menu.style')
+				li(ng-class='{selectedMenu:menu.isSelected}') {{menu.name}}

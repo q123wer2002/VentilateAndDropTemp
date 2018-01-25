@@ -156,5 +156,11 @@ m_app.product = function(req,res){
 m_app.download = function(req,res){
 	res.render( fnGetDeviceName( req ) + '_download', {title:"下載"} );
 }
+m_app.aboutUs = function(req,res){
+	res.render( fnGetDeviceName( req ) + '_about_us', {title:"關於我們"} );
+}
+m_app.contactUs = function(req,res){
+	res.render( fnGetDeviceName( req ) + '_contact_us', {title:"關於我們"} );
+}
 
 module.exports = m_app;
