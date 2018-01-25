@@ -153,5 +153,8 @@ m_app.product = function(req,res){
 	//as api
 	res.json( fnGetObjProduct(nId) );
 }
+m_app.download = function(req,res){
+	res.render( fnGetDeviceName( req ) + '_download', {title:"下載"} );
+}
 
 module.exports = m_app;

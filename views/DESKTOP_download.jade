@@ -1,0 +1,27 @@
+extends ./DESKTOP_templates/layout.jade
+block scripts
+	script(type='text/javascript', src='/js/download.js')
+block links
+	link(rel='stylesheet', type='text/css', href='/desktop_css/download.css')
+block content
+	.Mainbody(ng-controller='downloadController')
+		// gogle analysis
+		script.
+		include ./DESKTOP_templates/top.jade
+		// index start
+		.body
+			.body_container
+				h1 型錄下載
+				table
+					tr(style="background:#218FEE;color:#fff;")
+						td No.
+						td 名稱
+						td 下載
+					tr(ng-repeat="item in aryDownloads")
+						td {{$index+1}}
+						td(style="text-align:left") {{item.name}}
+						td
+							a(href="{{item.dw_link}}") 點擊下載
+
+			// end index
+		include ./DESKTOP_templates/footer.jade

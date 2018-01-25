@@ -35,12 +35,12 @@ block content
 						.specTable
 							h2(ng-if="( item.type == 'spec' )") 規格列表
 							table(ng-if="( item.type == 'spec' )")
-								tr(style="background:#218FEE;color:yellow;")
+								tr(style="background:#218FEE;color:#fff;")
 									td 項目
-									td 規格
+									td(style="border-left: 1px solid #218FEE;") 規格
 								tr(ng-repeat="(title, value) in item.data")
 									td {{title}}
-									td {{value}}
+									td(style="border-left: 1px solid #218FEE;") {{value}}
 						img(ng-if="( item.type == 'photo' )", ng-repeat="img in item.data", src="{{img}}")
 		// end index
 		include ./DESKTOP_templates/footer.jade

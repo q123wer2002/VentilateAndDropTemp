@@ -36,6 +36,7 @@ m_app.get( '/', m_routePage.index );
 m_app.get( '/index', m_routePage.index );
 m_app.get( '/patent', m_routePage.patent );
 m_app.get( '/product/:id?/:method?', m_routePage.product );
+m_app.get( '/download', m_routePage.download );
 
 m_app.listen( m_app.get('port'), function(){
 	console.log('Example app listening on port ' + m_app.get('port') + '!');
