@@ -11,14 +11,6 @@ block content
 		// index start
 		.body
 			.body_container
-				.patent_title_List
-					ul.titleUl
-						a(href='javascript:;', ng-repeat='patent in aryPatentList', ng-click='fnSelectPatent(patent)', ng-class='{slectedPatent:IsSelected($index)}')
-							li(ng-class='{slectedPatent:IsSelected($index)}') {{patent.title}}
-				.patent_body
-					h2 {{aryPatentList[nSelectPatent].title}}
-					ul.imgUl
-						li(ng-repeat='source in aryPatentList[nSelectPatent].imgs')
-							img(src='{{source}}')
+				
 			// end index
 		include ./DESKTOP_templates/footer.jade

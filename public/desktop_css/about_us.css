@@ -23,7 +23,6 @@
 .body_container table tr:hover{
 	background: rgba(33,143,238,0.5);
 }
-
 .body_container table tr a:hover{
 	text-decoration: underline;
 }

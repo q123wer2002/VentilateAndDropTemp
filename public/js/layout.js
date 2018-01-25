@@ -46,8 +46,8 @@ yuJeng.controller('mainController', function($scope, $rootScope,$http){
 			patent : {name:"專利認證", link:"patent", isSelected:false, isShown:true, style:{}},
 			product : {name:"產品資訊", link:"product", isSelected:false, isShown:true, style:{}},
 			//realPerform : {name:"工程實績", link:"realPerform", isSelected:false, isShown:true, style:{}},
-			anout_us : {name:"關於友證", link:"about_us", isSelected:false, isShown:true, style:{}},
 			download : {name:"型錄下載", link:"download", isSelected:false, isShown:true, style:{}},
+			anout_us : {name:"關於友證", link:"about_us", isSelected:false, isShown:true, style:{}},
 			contact_us : {name:"聯絡我們", link:"contact_us", isSelected:false, isShown:true, style:{}},
 		};
 

@@ -2,28 +2,61 @@
 	width: 1024px;
 	margin: auto;
 	padding: 15px 0px;
+	text-align: center;
 }
 
 .body_container h1{
 	font-weight: 800;
 }
 .body_container table{
-	width: 80%;
+	width: 65%;
 	margin: 10px auto 0 auto;
 	border-collapse: collapse;
-	color: #000;
 	text-align:center;
+	color: #000;
+}
+.body_container table tr{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .body_container table td{
-	padding:10px;
-	border:1px solid #888;
+	padding: 5px;
+	position: relative;
 }
-.body_container table tr:nth-child(even) {background: #eaeaea}
-.body_container table tr:nth-child(odd) {background: #fcfcfc}
-.body_container table tr:hover{
-	background: rgba(33,143,238,0.5);
+.body_container .photo{	
+	position: absolute;
+	left: 80px;
+	top: 0;
+	width: 100px;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("https://www.yasuda.com.tw/style/image/contact_us/001.png");
+}
+.body_container table tr input, textarea{
+	width: 90%;
+	padding: 7px 20px;
+	border: 1px solid #cdcdcd;
+    border-radius: 7px;
+}
+.body_container table tr textarea{
+	height: 80px;
 }
 
-.body_container table tr a:hover{
-	text-decoration: underline;
+.body_container table tr input:focus, textarea:focus{
+	outline: none;
+    border-color: #218FEE;
+    box-shadow: 0 0 10px #6EBAFB;
+}
+
+.body_container .btnSend{
+	width: 200px;
+	margin: 15px auto;
+	padding: 15px 20px;
+	background: #218FEE;
+	color: #fff;
+}
+.body_container .btnSend:hover{
+	cursor: pointer;
+	background: #4DAAFA;
 }

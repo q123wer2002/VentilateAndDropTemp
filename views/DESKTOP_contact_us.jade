@@ -11,14 +11,17 @@ block content
 		// index start
 		.body
 			.body_container
-				.patent_title_List
-					ul.titleUl
-						a(href='javascript:;', ng-repeat='patent in aryPatentList', ng-click='fnSelectPatent(patent)', ng-class='{slectedPatent:IsSelected($index)}')
-							li(ng-class='{slectedPatent:IsSelected($index)}') {{patent.title}}
-				.patent_body
-					h2 {{aryPatentList[nSelectPatent].title}}
-					ul.imgUl
-						li(ng-repeat='source in aryPatentList[nSelectPatent].imgs')
-							img(src='{{source}}')
+				h1 聯絡我們
+				div(style="position:relative")
+					.photo
+					table
+						tr(ng-repeat="info in aryContactInfos")
+							td(width="15%")
+								span 
+								span {{info.title}}
+							td
+								input(ng-model="info.value" ng-if="!info.isNeedBigSize")
+								textarea(ng-model="info.value" ng-if="info.isNeedBigSize")
+				.btnSend 確定/送出
 			// end index
 		include ./DESKTOP_templates/footer.jade
