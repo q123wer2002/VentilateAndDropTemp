@@ -4,7 +4,7 @@ var yuJeng = angular.module('yuJeng', []);
 yuJeng.controller('mainController', function($scope, $rootScope,$http){
 	//server location
 		$rootScope.server = {
-			ip : "192.168.1.14",
+			ip : "18.218.212.174",
 			port : 8000
 		};
 	//header
