@@ -10,16 +10,37 @@ block content
 		include ./DESKTOP_templates/top.jade
 		// index start
 		.body
-			.body_container
+			.body_container(ng-init="fnInit(#{id})")
 				.productTrace
 					ul.traceUl
-						li(ng-repeat="(obj,value) in objTrace")
-							a(href="{{value.link}}"){{value.name}}&#09;
-							span(ng-if="fnIsLastOne($index)")&gt;&#09;
-				.productList
+						li
+							a(href="/product") 產品大分類&#09;
+							span &gt;&#09;
+						li(ng-repeat="parent in objProduct.aryParents")
+							div.littlePhoto(ng-style="{'background-image':'url({{parent.pics[0]}})'}")
+							a(href="/product/{{parent.id}}", ng-class="{slectedTrace:(parent.id==objProduct.id)}")
+								{{parent.name}}&#09;
+							span(ng-if="($index+1) != objProduct.aryParents.length") &gt;&#09;
+				.productList(ng-if="!objProduct.isChild")
 					ul.ListUl
-						li(ng-repeat="node in fnGetAryRoot()")
-							img(src="{{node.pics[0]}}")
-							p{{node.name}}
+						a(ng-repeat="child in objProduct.aryChilds", href="/product/{{child.id}}")
+							img(src="{{child.pics[0]}}")
+							p {{child.name}}
+				.productDetail(ng-if="objProduct.isChild")
+					.productHeader
+						.PhotoArea(ng-style="{'background-image':'url({{objProduct.pics[1]}})'}")
+						.productTitle
+							h1 {{objProduct.name}}
+					.DetailItems(ng-repeat="item in objProduct.details")
+						.specTable
+							h2(ng-if="( item.type == 'spec' )") 規格列表
+							table(ng-if="( item.type == 'spec' )")
+								tr(style="background:#218FEE;color:yellow;")
+									td 項目
+									td 規格
+								tr(ng-repeat="(title, value) in item.data")
+									td {{title}}
+									td {{value}}
+						img(ng-if="( item.type == 'photo' )", ng-repeat="img in item.data", src="{{img}}")
 		// end index
 		include ./DESKTOP_templates/footer.jade
